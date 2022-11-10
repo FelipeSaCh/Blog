@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>BlogDB
+        </title>
+        <style>
+            .centrado{
+                text-align: center;
+            }
+        </style>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{%static 'estilos.css'%}" >
+    </head>
+    <body>
+        <font face="nunito,arial,verdana"> <h1>Blog creado en Python y Django</h1></font>
+        <section> 
+            {% for  elemento in articulos %}
+                <article>
+                    <font face="nunito,arial,verdana"> <h3>{{ elemento.nombre }}</h3></font>
+                    
+                    <p>
+                        {{ elemento.contenido }}
+                    </p>
+                    <img src="{{ elemento.imagen }}">
+                    <footer>
+                       Autor: {{ elemento.autor }}
+                    </footer>
+                </article>
+
+            {% endfor %}
+        </section>
+    </body>
+</html>
