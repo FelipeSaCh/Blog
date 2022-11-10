@@ -9,11 +9,15 @@
                 text-align: center;
             }
         </style>
+        
+        
         {% load static %}
         <link rel="stylesheet" type="text/css" href="{%static 'estilos.css'%}" >
     </head>
     <body>
-        <font face="nunito,arial,verdana"> <h1>Blog creado en Python y Django</h1></font>
+        <div id = "general">  <font face="nunito,arial,verdana"> <h1>Blog de Bases de Datos </h1></font> </div>
+
+       
         <section> 
             {% for  elemento in articulos %}
                 <article>
